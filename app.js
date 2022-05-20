@@ -34,12 +34,17 @@ but.addEventListener('click', () => {
 //2.2. Tiesiogiai HTML faile rankiniu būdu sukurkite <h3> tagą ir vieną mygtuką. Susikurkite tuščią masyvą, skaičiams saugoti. (2 taškai)
 // a. Paspaudus mygtuką, sugeneruokite rand() skaičių nuo 1 iki 10. Sugeneruotą skaičių pridėkite į masyvą, o tą masyvą atspausdinkite konsolėle. (4 taškai)
 // b. <h3> tage skaičiuokite ir su innerText() metodu rašykite visų sugeneruotų skaičių sumą. (4 taškai)
-const tusciasMasyvas = [];
-const skaicius = 0;
-const skSuma = 0;
-const but2 = document.querySelector('button2');
+
+const skaiciuMasyvas = [];
+let skaicius;
+let skSuma = 0;
+const button = document.querySelector('.button2');
 const tagH3 = document.querySelector('h3');
-but.addEventListener('click', () => {
-  tusciasMasyvas.rand(1, 6);
-  console.log('atliktas paspaudimas' + tusciasMasyvas);
+but2.addEventListener('click', () => {
+  skaicius = rand(1, 10);
+  skaiciuMasyvas.push(skaicius);
+  console.log(skaiciuMasyvas);
+  skSuma += skaicius;
+  tagH3.innerText = skSuma;
 });
+
